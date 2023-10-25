@@ -11,16 +11,16 @@
     Giao diện gồm:<br>
      &nbsp;&nbsp;&nbsp;&nbsp; - TRANG ĐĂNG NHẬP <br>
      &nbsp;&nbsp;&nbsp;&nbsp; - ĐĂNG  KÝ<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;- TRANG SINH VIÊN 
+    &nbsp;&nbsp;&nbsp;&nbsp;- TRANG SINH VIÊN <br>
       &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + Trang tin tức: hiển thị tin tức<br>
       &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + Trang đăng ký thực tập: thông tin sinh viên, lựa chọn công ty, thông tin đăng ký <br>
       &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + Trang thực tập: trạng thái đơn, thông tin sinh viên, báo cáo tuần, báo cáo tổng kết<br>
      &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp; + Trang thông tin: hiển thị thông tin tài khoản, thông tin sinh viên, đổi mật khẩu<br>
-     &nbsp;&nbsp;&nbsp;&nbsp; - TRANG CÔNG TY 
+     &nbsp;&nbsp;&nbsp;&nbsp; - TRANG CÔNG TY <br>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + Trang tin tức: hiển thị tin tức<br>
       &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + Trang đăng ký thực tập: thông tin công ty, thông tin đăng ký <br>
       &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + Trang danh sách đăng ký: danh sách sinh viên đăng ký chương trình thực tập <br>
-      &nbsp;&nbsp;&nbsp;&nbsp; - TRANG GIÁO VIÊN 
+      &nbsp;&nbsp;&nbsp;&nbsp; - TRANG GIÁO VIÊN <br>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; + Trang tin tức: hiển thị tin tức<br>
       &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + Trang thực tập:danh sách đơn đăng ký thực tập <br>
       &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + Trang công ty: danh sách công ty đăng đăng ký chương trình thực tập <br>
