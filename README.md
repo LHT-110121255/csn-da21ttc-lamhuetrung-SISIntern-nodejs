@@ -6,7 +6,7 @@
 
   Phần giao diện: 
   Sử dụng framework ReactJS để tạo phần giao điện đồng thời kết hợp với các thư viện như: axios, react-dom, react-icons, react-router-dom.
-  Đường dẫn sửa dụng RouterProvider để cấu hình url, useParams để lấy slug của url, Link để chuyển tiếp (giống thể <a> trong html).
+  Đường dẫn sửa dụng RouterProvider để cấu hình url, useParams để lấy slug của url, Link để chuyển tiếp (giống thẻ a trong html), useNavigate để chuyển trang.
   <br>
     Giao diện gồm:<br>
      &nbsp;&nbsp;&nbsp;&nbsp; - TRANG ĐĂNG NHẬP <br>
