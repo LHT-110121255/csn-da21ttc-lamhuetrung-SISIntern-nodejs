@@ -25,5 +25,5 @@
       &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + Trang thực tập:danh sách đơn đăng ký thực tập <br>
       &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + Trang công ty: danh sách công ty đăng đăng ký chương trình thực tập <br>
        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; + Trang sinh viên: danh sách sinh viên thực tập <br>
-      *Link demo: https://demo-sisintern.netlify.app/*<br>
+      *Link demo font-end: https://demo-sisintern.netlify.app/*<br>
   
