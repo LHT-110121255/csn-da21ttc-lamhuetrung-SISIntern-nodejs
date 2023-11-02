@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const SinhVienController = require('../controllers/GiaoVienController');
+const GiaovienController = require('../controllers/GiaoVienController');
+const TintucController = require('../controllers/TinTucController');
 
-router.get('/danhsachgiaovien', SinhVienController.layDanhSachGiaovien);
+router.get('/danhsachgiaovien', GiaovienController.layDanhSachGiaovien);
+router.get('/tintuc', TintucController.layThongBao);
 
 module.exports = router;

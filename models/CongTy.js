@@ -1,4 +1,3 @@
-// models/SinhVien.js
 const mongoose = require('mongoose');
 
 const sinhVienSchema = new mongoose.Schema({
@@ -6,7 +5,7 @@ const sinhVienSchema = new mongoose.Schema({
     tencongty: String,
     diachi: String,
     vitri: String,
-    sodienthoai: String,
+    email: String,
 });
 
 const SinhVien = mongoose.model('tblCongty', sinhVienSchema);

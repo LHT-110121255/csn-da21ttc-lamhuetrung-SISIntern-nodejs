@@ -7,6 +7,11 @@ class SinhVienController {
       .then(sinhvien => res.json(sinhvien))
       .catch(err => res.json("Lỗi /student: " + err))
     }
+    static layDanhThongTinSinhVien(req, res) {
+      SinhVien.filter()
+      .then(sinhvien => res.json(sinhvien))
+      .catch(err => res.json("Lỗi /student: " + err))
+    }
 }
 
 
