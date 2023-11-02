@@ -21,6 +21,7 @@ function sinhvien() {
               <Link to="/company/tintuc"><a ><li id='tintuc' ><HiOutlineNewspaper className='icon'/>Tin tức</li></a></Link>
               <Link to="/company/dangkythuctap"><a href=""><li id='thuctap'><FiUsers className='icon'/>Đăng ký thực tập</li></a></Link>
               <Link to="/company/danhsachdangky"><a href=""><li id='thongtin' className='click'><PiStudentDuotone className='icon'/>Danh sách đăng ký</li></a></Link>
+              <Link to="/company/canbohuongdan"><a href=""><li id='thongtin'><PiStudentDuotone className='icon'/>Cán bộ hướng dẫn</li></a></Link>
             </ul>
             <Link to="/"><a id='dangxuat' href="" className='dangxuatcongty'><FiLogOut className='icon'/>Đăng xuất</a></Link>
           </div>

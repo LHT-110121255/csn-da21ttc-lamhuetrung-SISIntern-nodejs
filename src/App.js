@@ -15,6 +15,7 @@ import Thongtin from '../src/pages/Student/thontintaikhoan';
 import TintucCT from '../src/pages/Company/tintuc';
 import Dangkythuctap from '../src/pages/Company/dangkythuctap';
 import Danhsachdangky from '../src/pages/Company/danhsachdangky';
+import Danhsachcanbo from '../src/pages/Company/canbohuongdan';
 import TintucGV from '../src/pages/Teacher/tintuc';
 import Thongtindangky from '../src/pages/Teacher/thongtindangky';
 import Quanlythuctap from '../src/pages/Teacher/quanlythuctap';
@@ -26,10 +27,6 @@ const router = createBrowserRouter([
   {
     path: `/`,
     element: <Index />,
-  },
-  {
-    path: `/:slug`,
-    element: <Login />,
   },
   {
     path: `/student/tintuc`,
@@ -82,6 +79,10 @@ const router = createBrowserRouter([
   {
     path: `/company/danhsachdangky`,
     element: <Danhsachdangky />,
+  },
+  {
+    path: `/company/canbohuongdan`,
+    element: <Danhsachcanbo />,
   },
   
 ]);

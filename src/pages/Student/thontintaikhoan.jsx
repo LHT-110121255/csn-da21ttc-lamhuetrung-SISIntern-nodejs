@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
 import { LuPencilLine } from 'react-icons/lu';
@@ -13,16 +13,18 @@ import { AiOutlineInfoCircle } from 'react-icons/ai';
 import '../../css/student.css';
 import '../../css/base.css';
 function Thongtin() {
-    const [sinhviens, setSinhviens] = useState([]);
+    const [sinhViens, setSinhViens] = useState([]);
+  
     useEffect(() => {
-        axios.get('/student/thongtintaikhoan') // Điều chỉnh URL tương ứng với tuyến đường API
-          .then((response) => {
-            setSinhviens(response.data);
-          })
-          .catch((error) => {
-            console.error('Lỗi khi lấy dữ liệu:', error);
-          });
-      }, []);
+        axios.get('http://localhost:3001/student/danhsachsinhvien') // Điều chỉnh URL tương ứng với tuyến đường API
+        .then((response) => setSinhViens(response.data))
+        .catch((error) => {
+            console.error('Lỗi react:', error);
+        });
+    }, []);
+
+    const thongTinSinhVien = sinhViens.find(ttsv => ttsv.masinhvien == "110121255");
+    console.log(thongTinSinhVien.email)
     return (
         <div className='container'>
           <div className='Navbar navbarSinhVien'>
@@ -31,53 +33,46 @@ function Thongtin() {
               <Link to="/student/tintuc"><a ><li id='tintuc'><HiOutlineNewspaper className='icon'/>Tin tức</li></a></Link>
               <Link to="/student/dondangky"><a href=""><li id='thuctap'  ><LiaUserCogSolid className='icon'/>Đăng ký thực tập</li></a></Link>
               <Link to="/student/thuctap"><a href=""><li id='thuctap'  ><LiaUserCogSolid className='icon'/>Thực tập</li></a></Link>
-              <Link to="/student/thongtintaikhoan"><a href=""><li id='thongtin' className='click'><AiOutlineInfoCircle className='icon'/>Thông tin</li></a></Link>
+              {/* <Link to="/student/thongtintaikhoan"><a href=""><li id='thongtin' className='click'><AiOutlineInfoCircle className='icon'/>Thông tin</li></a></Link> */}
             </ul>
             <Link to="/"><a id='dangxuat' href="" className='dangxuatsinhvien'><FiLogOut className='icon'/>Đăng xuất</a></Link>
           </div>
           <div className='data'>
               <div className="header"><AiOutlineHome className='icon' /><span id='route'>/Tài khoản</span></div>
                 <div className="content">
-                    
                     <h1 className="lable_chitiet">Thông tin tài khoản </h1>
                     <ul className='thongtintaikhoan'>
-                        {sinhviens.map((sinhvien) => (
-                        <li key={sinhvien._id}>
-                            <span className='lable'>{sinhvien}</span>
-                            <span className='info'>{sinhvien.email}</span>
-                         </li>
-                        ))}
                         {/* <li>
                             <span className='lable'>Email</span>
-                            <span className='info'>lamhuetrung@gmail.com</span>
+                            <span className='info'>{thongTinSinhVien.email}</span>
                         </li>
                         <li>
                             <span className='lable'>Ngày sinh</span>
-                            <span className='info'>08/01/2003</span>
+                            <span className='info'>{thongTinSinhVien.ngaysinh}</span>
                         </li>
                         <li>
                             <span className='lable'>Số điện thoại</span>
-                            <span className='info'>0763849007</span>
-                        </li>
+                            <span className='info'>{thongTinSinhVien.sodienthoai}</span>
+                        </li> */}
                         <li>
                             <span className='lable'>Vai trò</span>
                             <span className='info'>Sinh viên</span>
-                        </li> */}
+                        </li>
                     </ul>
                     <h1 className="lable_chitiet">Thông tin sinh viên</h1>
                     <ul className='thongtinsinhvien '>
-                        <li>
+                        {/* <li>
                             <span className='lable'>Mã số sinh viên</span>
-                            <span className='info'>110121255</span>
+                            <span className='info'>{thongTinSinhVien.masinhvien}</span>
                         </li>
                         <li>
                             <span className='lable'>Họ tên</span>
-                            <span className='info'>Lâm Huệ Trung</span>
+                            <span className='info'>{thongTinSinhVien.hoten}</span>
                         </li>
                         <li>
                             <span className='lable'>Mã lớp</span>
-                            <span className='info'>DA21TTC</span>
-                        </li>
+                            <span className='info'>{thongTinSinhVien.lop}</span>
+                        </li> */}
                     </ul>
                     <button className='button_chinhsua'> <LuPencilLine className='icon_button'/>Chỉnh sửa</button>
                     <h1 className="lable_chitiet">Đổi mật khẩu</h1>

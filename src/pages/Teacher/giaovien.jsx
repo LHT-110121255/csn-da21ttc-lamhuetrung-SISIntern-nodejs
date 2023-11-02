@@ -13,7 +13,7 @@ import '../../css/student.css';
 import '../../css/base.css';
 import '../../css/teacher.css';
 
-function Sinhvien() {
+function Giaovien() {
   const [Giaoviens, setGiaoviens] = useState([]);
   
   useEffect(() => {
@@ -82,4 +82,4 @@ function Sinhvien() {
     )
 }
 
-export default Sinhvien;
+export default Giaovien;

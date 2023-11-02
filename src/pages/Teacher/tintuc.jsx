@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Link } from "react-router-dom";
 import { GrNotification } from 'react-icons/gr';
 import { HiOutlineNewspaper } from 'react-icons/hi';
@@ -10,7 +11,16 @@ import { AiOutlineHome } from 'react-icons/ai';
 import '../../css/teacher.css';
 import '../../css/base.css';
 
-function tintuc() {
+function Tintuc() {
+  const [TinTucs, setTinTucs] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3001/company/tintuc') // Điều chỉnh URL tương ứng với tuyến đường API
+      .then((response) => setTinTucs(response.data))
+      .catch((error) => {
+        console.error('Lỗi react:', error);
+      });
+  }, []);
     return (
       <div className='container'>
           <div className='Navbar'>
@@ -30,14 +40,13 @@ function tintuc() {
                   <h1 className="lable">Tin tức</h1>
                   <ul className="items">
                     <Link>
-                          <li>
-                            <h2>THÔNG BÁO: VTA VỪA ĐĂNG KÝ CHƯƠNG TRÌNH THỰC TẬP</h2>
-                            <span>3 ngày trước (11:15 09/01/2023) </span>
-                          </li>
-                          <li>
-                            <h2>THÔNG BÁO: SINH VIÊN VỪA GỞI ĐƠN ĐĂNG KÝ CHƯƠNG TRÌNH THỰC TẬP</h2>
-                            <span>3 ngày trước (11:15 09/01/2023) </span>
-                          </li>
+                    {TinTucs.map((tintuc) => {
+                          return<li>
+                                <h2>THÔNG BÁO: {tintuc.thongbaogiaovien}</h2>
+                                <span> ({tintuc.thoigian}) </span>
+                              </li>
+                      })
+                    }
                     </Link>
                   </ul>
               </div>
@@ -46,4 +55,4 @@ function tintuc() {
     )
 }
 
-export default tintuc;
+export default Tintuc;

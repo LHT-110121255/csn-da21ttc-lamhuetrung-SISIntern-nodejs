@@ -1,15 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import { Link } from "react-router-dom";
 import { GrNotification } from 'react-icons/gr';
 import { HiOutlineNewspaper } from 'react-icons/hi';
 import { LiaUserCogSolid } from 'react-icons/lia';
 import { FiLogOut } from 'react-icons/fi';
 import { AiOutlineHome } from 'react-icons/ai';
-import { AiOutlineInfoCircle } from 'react-icons/ai';
 import '../../css/student.css';
 import '../../css/base.css';
 
-function tintuc() {
+function Tintuc() {
+  const [TinTucs, setTinTucs] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:3001/student/tintuc') // Điều chỉnh URL tương ứng với tuyến đường API
+      .then((response) => setTinTucs(response.data))
+      .catch((error) => {
+        console.error('Lỗi react:', error);
+      });
+  }, []);
+
     return (
       <div className='container'>
           <div className='Navbar navbarSinhVien'>
@@ -18,7 +28,7 @@ function tintuc() {
               <Link to="/student/tintuc"><a ><li id='tintuc' className='click'><HiOutlineNewspaper className='icon'/>Tin tức</li></a></Link>
               <Link to="/student/dondangky"><a href=""><li id='thuctap'  ><LiaUserCogSolid className='icon'/>Đăng ký thực tập</li></a></Link>
               <Link to="/student/thuctap"><a href=""><li id='thuctap'  ><LiaUserCogSolid className='icon'/>Thực tập</li></a></Link>
-              <Link to="/student/thongtintaikhoan"><a href=""><li id='thongtin' ><AiOutlineInfoCircle className='icon'/>Thông tin</li></a></Link>
+              {/* <Link to="/student/thongtintaikhoan"><a href=""><li id='thongtin' ><AiOutlineInfoCircle className='icon'/>Thông tin</li></a></Link> */}
             </ul>
             <Link to="/"><a id='dangxuat' href="" className='dangxuatsinhvien'><FiLogOut className='icon'/>Đăng xuất</a></Link>
           </div>
@@ -28,10 +38,13 @@ function tintuc() {
                   <h1 className="lable">Tin tức</h1>
                   <ul className="items">
                     <Link>
-                          <li>
-                            <h2>THÔNG BÁO: CHƯƠNG TRÌNH THỰC TẬP HỌC KỲ III TẠI TRƯỜNG ĐẠI HỌC TRÀ VINH</h2>
-                            <span>3 ngày trước (11:15 09/01/2023) </span>
-                          </li>
+                    {TinTucs.map((tintuc) => {
+                          return<li>
+                                <h2>THÔNG BÁO: {tintuc.thongbaosinhvien}</h2>
+                                <span> ({tintuc.thoigian}) </span>
+                              </li>
+                      })
+                    }
                     </Link>
                   </ul>
               </div>
@@ -40,4 +53,4 @@ function tintuc() {
     )
 }
 
-export default tintuc;
+export default Tintuc;

@@ -49,7 +49,7 @@ function Congty() {
                           <tr className='tieude_table'>
                             <th id='soluong'>Mã công ty</th>
                             <th id='tencongty'>Tên công ty</th>
-                            <th id='tencongty'>Số điện thoại</th>
+                            <th id='tencongty'>Email</th>
                             <th id='diachicongty'>Địa chỉ</th>
                             <th id='vitri'>Vị trí tuyển thực tập</th>
                           </tr>
@@ -59,7 +59,7 @@ function Congty() {
                             return <tr className='info'>
                             <th id='soluong'>{congty.macongty}</th>
                             <th id='tencongty'>{congty.tencongty}</th>
-                            <th id='tencongty'>{congty.sodienthoai}</th>
+                            <th id='tencongty'>{congty.email}</th>
                             <th id='diachicongty'>{congty.diachi}</th>
                             <th id='vitri'>{congty.vitri}</th>
                         </tr>

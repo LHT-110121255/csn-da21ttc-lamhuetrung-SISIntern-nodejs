@@ -7,17 +7,17 @@ function Login() {
   const sinhvien = (event) => {
     event.preventDefault();
     alert("Bạn đăng nhập với vai trò sinh viên");
-    navigate('/student');
+    navigate('/student/tintuc');
   };
   const giaovien = (event) => {
     event.preventDefault();
     alert("Bạn đăng nhập với vai trò giáo viên");
-    navigate('/teacher');
+    navigate('/teacher/tintuc');
   };
   const congty = (event) => {
     event.preventDefault();
     alert("Bạn đăng nhập với vai trò công ty");
-    navigate('/company');
+    navigate('/company/tintuc');
   };
   return (
     <div className="home_index">

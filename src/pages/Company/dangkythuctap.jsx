@@ -20,6 +20,7 @@ function thuctap() {
               <Link to="/company/tintuc"><a ><li id='tintuc' ><HiOutlineNewspaper className='icon'/>Tin tức</li></a></Link>
               <Link to="/company/dangkythuctap"><a href=""><li id='thuctap' className='click'><FiUsers className='icon'/>Đăng ký thực tập</li></a></Link>
               <Link to="/company/danhsachdangky"><a href=""><li id='thongtin'><PiStudentDuotone className='icon'/>Danh sách đăng ký</li></a></Link>
+              <Link to="/company/canbohuongdan"><a href=""><li id='thongtin'><PiStudentDuotone className='icon'/>Cán bộ hướng dẫn</li></a></Link>
             </ul>
             <Link to="/"><a id='dangxuat' href="" className='dangxuatcongty'><FiLogOut className='icon'/>Đăng xuất</a></Link>
           </div>
@@ -52,15 +53,14 @@ function thuctap() {
                       <h1 className="lable_chitiet">Thông tin đăng ký</h1>
                       <ul className='thongtintaikhoan'>
                           <li>
-                            <input  placeholder='Vị trí thực tập' type="text"/>
-                          </li>
-                          <li>
                             <select name="" id="1">
                               <option value="">--Chọn trường--</option>
                               <option value="">Đại học Trà Vinh</option>
                             </select>
                           </li>
-                          
+                          <li>
+                            <input  placeholder='Vị trí thực tập' type="text"/>
+                          </li>
                       </ul>
                       <ul className='thongtintaikhoan'>
                             <li>
@@ -68,6 +68,28 @@ function thuctap() {
                             </li>
                             <li>
                               <input  placeholder='Ngày bắt đầu' type="text"/>
+                            </li>
+                      </ul>
+                    </div>
+                    <div className="thongtincongty company">
+                      <h1 className="lable_chitiet">Thông tin cán bộ hướng dẫn</h1>
+                      <ul className='thongtintaikhoan'>
+                            <li>
+                              <input placeholder='Cán bộ hướng dẫn' type="text" />
+                            </li>
+                            <li>
+                              <input  placeholder='chức vụ' type="text"/>
+                            </li>
+                            <li>
+                              <input  placeholder='vị trí hướng dẫn' type="text"/>
+                            </li>
+                      </ul>
+                      <ul className='thongtintaikhoan'>
+                            <li>
+                              <input  placeholder='Số điện thoại' type="text"/>
+                            </li>
+                            <li>
+                              <input  placeholder='email' type="text"/>
                             </li>
                       </ul>
                     </div>
